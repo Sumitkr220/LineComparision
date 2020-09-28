@@ -33,14 +33,18 @@ namespace LineComparion
             double Length_Of_Line1 = Math.Sqrt(x + y);
             double Length_Of_Line2 = Math.Sqrt(xx + yy);
 
-            Boolean b = Length_Of_Line1.Equals(Length_Of_Line2);
-            if (b)
+            int comp = Length_Of_Line1.CompareTo(Length_Of_Line2);
+
+            if (comp > 0)
             {
-                Console.WriteLine("Both Lines are equal");
+                Console.WriteLine("Length of Line1 is greater than Line2");
+            }
+            else if (comp < 0)
+            {
+                Console.WriteLine("Length of Line2 is greater than Line1");
             }
             else
-
-                Console.WriteLine("Both lines are not equal");
+                Console.WriteLine("Length of Line 1 is equal to Line2");
 
 
         }
