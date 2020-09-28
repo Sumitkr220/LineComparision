@@ -15,12 +15,34 @@ namespace LineComparion
             Console.WriteLine("Enter value of y2");
             int y2 = Convert.ToInt32(Console.ReadLine());
 
+            Console.WriteLine("Enter value of x3");
+            int x3 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter value of y3");
+            int y3 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter value of x4");
+            int x4 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter value of y4");
+            int y4 = Convert.ToInt32(Console.ReadLine());
+
             int x = (x2 - x1) * (x2 - x1);
             int y = (y2 - y1) * (y2 - y1);
 
-            double Length_Of_Line = Math.Sqrt(x + y);
+            int xx = (x4 - x3) * (x4 - x3);
+            int yy = (y4 - y3) * (y4 - y3);
 
-            Console.WriteLine(Length_Of_Line);
+            double Length_Of_Line1 = Math.Sqrt(x + y);
+            double Length_Of_Line2 = Math.Sqrt(xx + yy);
+
+            Boolean b = Length_Of_Line1.Equals(Length_Of_Line2);
+            if (b)
+            {
+                Console.WriteLine("Both Lines are equal");
+            }
+            else
+
+                Console.WriteLine("Both lines are not equal");
+
+
         }
     }
 }
